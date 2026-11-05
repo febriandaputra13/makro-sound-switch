@@ -30,23 +30,33 @@ There are no toast notifications, accounts, downloads at runtime, or telemetry.
 
 These are examples. Choose your own keys and the devices connected to your computer.
 
-## Build and run
+## How to run
 
-Windows 10 or 11 with .NET Framework 4.8 is recommended. No third-party packages are required.
+Windows 10 or 11 with .NET Framework 4.8 is recommended.
 
-From the repository folder, run:
+1. On this repository page, click **Code → Download ZIP**.
+2. Right-click the downloaded ZIP and choose **Extract All**. Extract it to a folder where you can save files.
+3. Open the extracted folder and double-click **Makro Sound Switch V.0.1.exe**. Run it from the extracted folder, not from inside the ZIP.
+4. The app starts hidden in the background. Find its slider icon in the Windows system tray; it may be under the **^** arrow. Double-click the icon to open the app. Running the EXE again also opens the existing instance.
+5. Create a scenario and save it. The app creates a `config` folder beside the EXE to store your scenarios and settings.
+
+If the ZIP includes the EXE, no build or installation is needed. If it contains only source files, build the app using the instructions below.
+
+## Build from source (optional)
+
+Open PowerShell in the extracted repository folder and run:
 
 ```powershell
 powershell -File .\build.ps1
 ```
 
-The build script uses the Windows C# compiler and creates:
+The script uses the Windows C# compiler, requires no third-party packages, and creates:
 
 ```text
 dist\Makro Sound Switch V.0.1.exe
 ```
 
-Run the EXE. By default, it starts hidden. Double-click its system tray icon, or run the EXE again, to open the window.
+Double-click that EXE to run the app.
 
 ## Create a scenario
 
