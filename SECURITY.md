@@ -1,4 +1,4 @@
-﻿# Security review
+# Security review
 
 This was a source review plus targeted regression tests, not an independent penetration test or a guarantee that the app is vulnerability-free.
 
@@ -9,7 +9,7 @@ This was a source review plus targeted regression tests, not an independent pene
 - Settings XML explicitly prohibits DTDs, disables external resolvers, and limits file/document size and item counts. Settings are data parsed by XmlSerializer into fixed app types, not executable commands.
 - Native imports are restricted to the Windows System32 directory.
 - Removed the device-inventory diagnostics export from the production application.
-- The publishable source tree excludes user settings, device IDs, local inventories, binaries and generated test output.
+- The repository excludes user settings, device IDs, local inventories and generated test output. It intentionally includes the ready-to-run application EXE; other generated binaries are ignored.
 
 ## Permissions the app still needs
 

@@ -40,7 +40,7 @@ Windows 10 or 11 with .NET Framework 4.8 is recommended.
 4. The app starts hidden in the background. Find its slider icon in the Windows system tray; it may be under the **^** arrow. Double-click the icon to open the app. Running the EXE again also opens the existing instance.
 5. Create a scenario and save it. The app creates a `config` folder beside the EXE to store your scenarios and settings.
 
-If the ZIP includes the EXE, no build or installation is needed. If it contains only source files, build the app using the instructions below.
+The repository includes the ready-to-run EXE, so no build or installation is needed. The source-building instructions below are optional.
 
 ## Build from source (optional)
 
@@ -56,7 +56,7 @@ The script uses the Windows C# compiler, requires no third-party packages, and c
 dist\Makro Sound Switch V.0.1.exe
 ```
 
-Double-click that EXE to run the app.
+The build also updates the ready-to-run EXE at the repository root. Double-click either copy to run the app.
 
 ## Create a scenario
 
