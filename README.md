@@ -117,3 +117,8 @@ Your keyboard must support the number of keys you hold together. Some protected 
 Global shortcuts use a keyboard hook. Held-key state stays in memory; the app does not record typed text or save a key history. The application has no network client or remote-control feature. See [SECURITY.md](SECURITY.md) for the security review and its limits.
 
 Current version: **0.1**.
+
+
+### Reconnecting audio devices
+
+Connected devices refresh automatically about every two seconds, including while the scenario editor is open. An unplugged selection stays saved instead of being replaced by another device. The app remembers the endpoint ID and device name; when Windows changes the ID, it can reconnect to a single connected device with the same name and direction. If multiple connected devices share that name, select the intended one manually. If the old endpoint was already removed from Windows before the app could learn its name, select the device once in Edit scenario and save.
