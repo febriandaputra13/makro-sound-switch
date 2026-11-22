@@ -5,7 +5,7 @@ if (!(Test-Path -LiteralPath $compiler)) { $compiler = Join-Path $env:WINDIR 'Mi
 $dist = Join-Path $PSScriptRoot 'dist'
 Push-Location $dist
 try {
-    foreach ($test in @('Regression','ChordVerify','FeatureVerify','SortToggleVerify','ScrollSecurityVerify','PolishVerify','PortableVerify','DeviceReconnectVerify')) {
+    foreach ($test in @('Regression','ChordVerify','FeatureVerify','SortToggleVerify','ScrollSecurityVerify','PolishVerify','PortableVerify','DeviceReconnectVerify','OfflineToastVerify')) {
         & $compiler /nologo "/out:$dist\$test.exe" "/reference:$dist\Makro Sound Switch V.0.1.exe" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.Core.dll "$PSScriptRoot\tests\$test.cs"
         if ($LASTEXITCODE -ne 0) { throw "$test did not compile" }
         & "$dist\$test.exe" > "$dist\$test-results.txt"
@@ -13,6 +13,7 @@ try {
         Write-Output "$test passed"
     }
 } finally { Pop-Location }
+
 
 
 

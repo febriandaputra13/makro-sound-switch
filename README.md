@@ -18,7 +18,7 @@ Makro Sound Switch brings those steps into named scenarios. Set up the devices a
 - Drag keys and actions to rearrange them.
 - Start hidden, optionally launch at Windows sign-in, and choose what happens when the window closes.
 
-There are no toast notifications, accounts, downloads at runtime, or telemetry.
+Scenario changes show a small in-app toast. There are no Windows notification-center alerts, accounts, downloads at runtime, or telemetry.
 
 ## A simple setup
 
@@ -122,3 +122,10 @@ Current version: **0.1**.
 ### Reconnecting audio devices
 
 Connected devices refresh automatically about every two seconds, including while the scenario editor is open. An unplugged selection stays saved instead of being replaced by another device. The app remembers the endpoint ID and device name; when Windows changes the ID, it can reconnect to a single connected device with the same name and direction. If multiple connected devices share that name, select the intended one manually. If the old endpoint was already removed from Windows before the app could learn its name, select the device once in Edit scenario and save.
+
+
+### Activating scenarios with missing devices
+
+A scenario can still activate when its saved input or output is unplugged. Unavailable or ambiguous device actions are skipped while the other available actions run in order. Windows keeps its current default for a skipped direction. A mute action is also skipped if there is no connected output. Saved device selections stay intact for reconnection. Actual switching errors still report a failure and attempt to restore prior audio defaults.
+
+Every activation displays a small toast near the bottom-right of the current monitor with the scenario name and any skipped-action count. It disappears after 2.5 seconds without taking keyboard focus or appearing in the Windows notification center. Repeated activations replace the previous toast rather than stacking popups.
