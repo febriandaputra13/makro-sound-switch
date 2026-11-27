@@ -36,7 +36,7 @@ Windows 10 or 11 with .NET Framework 4.8 is recommended.
 
 1. On this repository page, click **Code → Download ZIP**.
 2. Right-click the downloaded ZIP and choose **Extract All**. Extract it to a folder where you can save files.
-3. Open the extracted folder and double-click **Makro Sound Switch V.0.1.exe**. Run it from the extracted folder, not from inside the ZIP.
+3. Open the extracted folder and double-click **Makro Sound Switch V1.0.exe**. Run it from the extracted folder, not from inside the ZIP.
 4. The app starts hidden in the background. Find its slider icon in the Windows system tray; it may be under the **^** arrow. Double-click the icon to open the app. Running the EXE again also opens the existing instance.
 5. Create a scenario and save it. The app creates a `config` folder beside the EXE to store your scenarios and settings.
 
@@ -53,7 +53,7 @@ powershell -File .\build.ps1
 The script uses the Windows C# compiler, requires no third-party packages, and creates:
 
 ```text
-dist\Makro Sound Switch V.0.1.exe
+dist\Makro Sound Switch V1.0.exe
 ```
 
 The build also updates the ready-to-run EXE at the repository root. Double-click either copy to run the app.
@@ -75,7 +75,7 @@ Play/Pause toggles playback in the active compatible media player. Mute/Unmute t
 Scenarios and app preferences are saved beside the EXE:
 
 ```text
-Makro Sound Switch V.0.1.exe
+Makro Sound Switch V1.0.exe
 config/
   scenarios.xml
   scenarios.xml.bak
@@ -116,7 +116,7 @@ Your keyboard must support the number of keys you hold together. Some protected 
 
 Global shortcuts use a keyboard hook. Held-key state stays in memory; the app does not record typed text or save a key history. The application has no network client or remote-control feature. See [SECURITY.md](SECURITY.md) for the security review and its limits.
 
-Current version: **0.1**.
+Current version: **1.0**.
 
 
 ### Reconnecting audio devices

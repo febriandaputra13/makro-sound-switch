@@ -19,4 +19,4 @@ config/
 *.xml.bak
 
 # Ready-to-run app included in Download ZIP
-!/Makro Sound Switch V.0.1.exe
+!/Makro Sound Switch V1.0.exe
